@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  sktcdr:
+    image: sktcdr/base:1.0.0
+    volumes:
+      - ./python:/python
+      - ./oracle-instant-client/network:/usr/lib/oracle/12.2/client64/lib/network
+    environment:
+      - ORACLE_SID=SKT_CDR_SID
+    ports:
+      - 8888:8888
+    command: ["jupyter", "notebook", "--allow-root", "--ip=0.0.0.0", "--port=8888", "--no-browser"]
+ 

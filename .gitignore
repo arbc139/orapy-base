@@ -1,0 +1,4 @@
+**/__pycache__
+oracle-instant-client/network/admin/tnsnames.ora
+python/*
+!python/test_cx_oracle.py.example
